@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  flex-direction: column;
+  margin: 5% 2% !important;
+}
+
+.bar {
+  margin: 6% 0% !important;
+}
