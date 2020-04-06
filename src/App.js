@@ -5,6 +5,7 @@ import styles from "./App.module.css";
 import { fetchData, fetchCountriesData } from "./api";
 
 import coronaImage from "./images/coronavirus.png";
+import { Paper, Typography } from "@material-ui/core";
 
 class App extends React.Component {
   state = {
@@ -58,6 +59,9 @@ class App extends React.Component {
           deaths={this.state.deaths}
           recovered={this.state.recoveredCases}
         />
+        <Paper elevation={3}>
+          <Typography>Created By: Sajjad Haider Sayed</Typography>
+        </Paper>
       </div>
     );
   }
