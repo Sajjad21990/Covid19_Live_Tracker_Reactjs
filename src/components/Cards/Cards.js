@@ -17,7 +17,7 @@ const Cards = (props) => {
 
   return (
     <div className={styles.container}>
-      <Grid container spacing={3} justify="center">
+      <Grid container spacing={2} justify="center">
         <Grid
           item
           component={Card}
