@@ -13,9 +13,27 @@ export const fetchData = async (country) => {
 
   try {
     const {
-      data: { cases, todayCases, deaths, todayDeaths, recovered, updated },
+      data: {
+        cases,
+        todayCases,
+        deaths,
+        todayDeaths,
+        recovered,
+        updated,
+        tests,
+        active,
+      },
     } = await axios.get(changeableUrl);
-    return { cases, todayCases, deaths, todayDeaths, recovered, updated };
+    return {
+      cases,
+      todayCases,
+      deaths,
+      todayDeaths,
+      recovered,
+      updated,
+      tests,
+      active,
+    };
   } catch (error) {
     console.log(error);
   }
