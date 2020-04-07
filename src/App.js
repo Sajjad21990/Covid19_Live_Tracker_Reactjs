@@ -62,6 +62,7 @@ class App extends React.Component {
         <Paper elevation={3}>
           <Typography>Created By: Sajjad Haider Sayed</Typography>
         </Paper>
+        {/* "homepage": "http://Sajjad21990.github.io/Covid-19-Live-Tracker-App-using-Reactjs", */}
       </div>
     );
   }
