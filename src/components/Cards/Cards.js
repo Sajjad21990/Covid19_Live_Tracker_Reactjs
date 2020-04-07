@@ -167,9 +167,7 @@ const Cards = (props) => {
           </Typography>
           <Typography
             className={cx(styles.todaysCount, styles.recoveredTodaysCount)}
-          >
-            [+13]
-          </Typography>
+          ></Typography>
           <Typography
             className={cx(styles.totalCount, styles.recoveredTotalCount)}
           >
@@ -184,9 +182,7 @@ const Cards = (props) => {
           </Typography>
           <Typography
             className={cx(styles.todaysCount, styles.testTodaysCount)}
-          >
-            [+13]
-          </Typography>
+          ></Typography>
           <Typography className={cx(styles.totalCount, styles.testTotalCount)}>
             <span style={{ fontSize: "22px", fontWeight: "bold" }}>
               <CountUp start={0} end={tests} duration={2} separator="," />

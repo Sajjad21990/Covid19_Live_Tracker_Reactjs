@@ -95,10 +95,12 @@
   border-bottom: 1px groove rgba(0, 0, 255, 0.5);
 }
 .recoveredTotalCount {
+  margin-top: 17% !important;
   color: #2ba847;
   border-bottom: 1px groove rgba(0, 255, 0, 0.5);
 }
 .testTotalCount {
+  margin-top: 17% !important;
   color: #fc9803;
   border-bottom: 1px groove #f7880a;
 }
