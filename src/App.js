@@ -62,9 +62,6 @@ class App extends React.Component {
         <Paper elevation={3}>
           <Typography>Created By: Sajjad Haider Sayed</Typography>
         </Paper>
-        {/* 
-        "predeploy": "npm run build",
-    "deploy": "gh-pages -d build", */}
       </div>
     );
   }
