@@ -33,7 +33,7 @@ const CountryPicker = ({ handleCountryChange }) => {
             styles={styles.option}
           >
             <option value="">Global</option>
-            <option value="USA">USA</option>
+            <option value="Usa">USA</option>
             <option value="India">India</option>
             {fetchedCounries.map((country, index) => (
               <option key={index} value={country}>

@@ -11,3 +11,17 @@ body {
   width: 50%;
   margin-top: 50px;
 }
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 12px;
+  position: absolute;
+  border: 2px groove black;
+  left: 0;
+  margin: 10px !important;
+}
+.links a {
+  text-decoration: none;
+}

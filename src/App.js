@@ -61,7 +61,18 @@ class App extends React.Component {
           recovered={this.state.recoveredCases}
         />
         <Paper elevation={3}>
-          <Typography>Created By: Sajjad Haider Sayed</Typography>
+          <Typography className={styles.links}>
+            Api Details:{" "}
+            <a
+              href="https://documenter.getpostman.com/view/8854915/SzS7R6uu?version=latest"
+              target="_blank"
+            >
+              Api 1,
+            </a>
+            <a href=" https://covid19.mathdro.id/api" target="_blank">
+              Api 2
+            </a>
+          </Typography>
         </Paper>
       </div>
     );
