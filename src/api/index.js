@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url_1 = "https://corona.lmao.ninja";
+const url_1 = "https://corona.lmao.ninja/v2";
 const url_2 = "https://covid19.mathdro.id/api";
 
 export const fetchData = async (country) => {
@@ -70,9 +70,9 @@ export const fetchCountriesData = async (country) => {
   let changeableUrl = url_1;
 
   if (country) {
-    changeableUrl = `${url_1}/v2/historical/${country}`;
+    changeableUrl = `${url_1}/historical/${country}`;
   } else {
-    changeableUrl = `${url_1}/v2/historical/`;
+    changeableUrl = `${url_1}/historical/`;
   }
 
   try {
@@ -84,3 +84,21 @@ export const fetchCountriesData = async (country) => {
     console.log(error);
   }
 };
+
+// export const fetchIndianData = async () => {
+//   try {
+//     const response = await axios.get(
+//       "https://api.covid19india.org/state_district_wise.json"
+//     );
+//     console.log(response.data);
+//     const state = await Object.keys(response.data);
+//     await console.log(state);
+//     const district = await Object.keys(response.data.Kerala.districtData);
+//     await console.log(district);
+//     await console.log(response.data.Kerala.districtData.Thirssur);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// fetchIndianData();

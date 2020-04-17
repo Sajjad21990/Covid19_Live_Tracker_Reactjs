@@ -1,0 +1,65 @@
+#confirmedheading {
+  color: #ff9fb3;
+}
+
+#confirmedheading {
+  color: #ff9fb3;
+}
+
+#activeheading {
+  color: #6cb3ff;
+}
+#recoveredheading {
+  color: #85ce95;
+}
+
+#testheading {
+  color: #fcb449;
+}
+#deathsheading {
+  color: #adb2b7;
+}
+
+#confirmedTodaysCount {
+  color: #ff7d99;
+}
+
+#activeTodaysCount {
+  display: none;
+}
+
+#testTodaysCount {
+  display: none;
+  color: #fcb449;
+}
+#recoveredTodaysCount {
+  display: none;
+  color: #7fcb90;
+}
+#deathsTodaysCount {
+  color: #b2b7bb;
+}
+
+#confirmedTotalCount {
+  color: #ff083b;
+  border-bottom: 1px groove rgba(255, 0, 0, 0.5);
+}
+#activeTotalCount {
+  margin-top: 26% !important;
+  color: #1485ff;
+  border-bottom: 1px groove rgba(0, 0, 255, 0.5);
+}
+#recoveredTotalCount {
+  margin-top: 26% !important;
+  color: #2ba847;
+  border-bottom: 1px groove rgba(0, 255, 0, 0.5);
+}
+#testTotalCount {
+  margin-top: 26% !important;
+  color: #fc9803;
+  border-bottom: 1px groove #f7880a;
+}
+#deathsTotalCount {
+  color: #767e85;
+  border-bottom: 1px groove rgba(0, 0, 0, 0.5);
+}
