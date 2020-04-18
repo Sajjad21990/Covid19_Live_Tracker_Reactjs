@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Chart.module.css";
 import { Line, Bar } from "react-chartjs-2";
 import { fetchDailyData } from "../../api";
+import { ResponsiveLine } from "@nivo/line";
 
 const Chart = (props) => {
   const { data1, countryName, dates, cases, deaths, recovered } = props;
