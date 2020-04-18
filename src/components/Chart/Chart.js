@@ -110,4 +110,3 @@ const Chart = (props) => {
 };
 
 export default Chart;
-// "homepage": "http://Sajjad21990.github.io/Covid-19-Live-Tracker-App-using-Reactjs",
