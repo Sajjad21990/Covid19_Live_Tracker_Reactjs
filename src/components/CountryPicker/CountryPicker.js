@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { NativeSelect, FormControl, Paper } from "@material-ui/core";
+import {
+  NativeSelect,
+  FormControl,
+  Paper,
+  Typography,
+} from "@material-ui/core";
 import styles from "./CountryPicker.module.css";
 
 import { fetchCountries } from "../../api";
@@ -18,6 +23,10 @@ const CountryPicker = ({ handleCountryChange }) => {
   return (
     <div className={styles.container}>
       <Paper elevation={3}>
+        <div className="label">
+          <h3>Select Country</h3>
+        </div>
+
         <FormControl>
           <NativeSelect
             defaultValue=""

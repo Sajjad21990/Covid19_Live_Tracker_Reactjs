@@ -3,6 +3,7 @@ import styles from "./Chart.module.css";
 import { Line, Bar } from "react-chartjs-2";
 import { fetchDailyData } from "../../api";
 import { ResponsiveLine } from "@nivo/line";
+import { yellow } from "@material-ui/core/colors";
 
 const Chart = (props) => {
   const { data1, countryName, dates, cases, deaths, recovered } = props;
@@ -49,21 +50,21 @@ const Chart = (props) => {
             data: cases,
             label: "Infected",
             borderColor: "#3333ff",
-            backgroundColor: "rgba(0,0,255,0.2)",
+            backgroundColor: "rgba(126, 188, 238,0.5)",
             fill: true,
           },
           {
             data: recovered,
             label: "Recovered",
             borderColor: "#3aff33",
-            backgroundColor: "rgba(0,255,0, 0.2)",
+            backgroundColor: "rgba(3, 252, 136, 0.5)",
             fill: true,
           },
           {
             data: deaths,
             label: "Deaths",
             borderColor: "red",
-            backgroundColor: "rgba(255,0,0,0.5)",
+            backgroundColor: "rgba(255,170,181, 0.5)",
             fill: true,
           },
         ],
@@ -79,9 +80,9 @@ const Chart = (props) => {
           {
             label: "People",
             backgroundColor: [
-              "rgba(0, 0, 255,0.5)",
-              "rgba(0, 255, 0, 0.5)",
-              "rgba(255,0,0, 0.5)",
+              "rgba(126, 188, 238,1)",
+              "rgba(3, 252, 136, 1)",
+              "rgba(255,170,181, 1)",
             ],
             data: [data1.cases, data1.recovered, data1.deaths],
           },

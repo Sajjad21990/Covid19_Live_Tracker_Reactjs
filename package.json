@@ -12,7 +12,6 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
-    "lodash": "4.17.11",
     "match-sorter": "2.3.0",
     "namor": "^2.0.2",
     "react": "^16.13.1",
