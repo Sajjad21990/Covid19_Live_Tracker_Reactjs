@@ -3,6 +3,7 @@ import styles from "./Chart.module.css";
 import { Line, Bar } from "react-chartjs-2";
 import { fetchDailyData } from "../../api";
 import ChartsPage from "../Test/ChartsPage";
+import Loader from "../Loader/Loader";
 
 const Chart = (props) => {
   const {
@@ -53,7 +54,9 @@ const Chart = (props) => {
         ],
       }}
     />
-  ) : null;
+  ) : (
+    <Loader />
+  );
 
   let countryLineChart = cases ? (
     <Line
@@ -78,13 +81,15 @@ const Chart = (props) => {
             data: deaths,
             label: "Deaths",
             borderColor: "red",
-            backgroundColor: "rgba(255,170,181, 0.5)",
+            backgroundColor: "rgba(255,0,0, 1)",
             fill: true,
           },
         ],
       }}
     />
-  ) : null;
+  ) : (
+    <Loader />
+  );
 
   let barGraph = data1.cases ? (
     <Bar
@@ -107,7 +112,9 @@ const Chart = (props) => {
         title: { display: true, text: `Current state in ${countryName}` },
       }}
     />
-  ) : null;
+  ) : (
+    <Loader />
+  );
 
   let graph = globalLineChart;
   const bar = barGraph;

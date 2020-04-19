@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Cards.module.css";
 import { Grid } from "@material-ui/core";
-
+import Loader from "../Loader/Loader";
 import CardConstant from "../../constants/CardConstant";
 
 const Cards = (props) => {
@@ -22,7 +22,7 @@ const Cards = (props) => {
   updatedDate = updatedDate.slice(0, 8);
 
   if (!cases) {
-    return "Loading...";
+    return <Loader />;
   }
 
   return (
