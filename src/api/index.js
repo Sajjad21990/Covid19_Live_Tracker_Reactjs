@@ -55,6 +55,19 @@ export const fetchDailyData = async () => {
   }
 };
 
+export const fetchDailyRecoveredData = async () => {
+  try {
+    const { data } = await axios.get(
+      "https://corona.lmao.ninja/v2/historical/all?lastdays=200"
+    );
+
+    const recoveredValues = await Object.values(data.recovered);
+    return recoveredValues;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const fetchCountries = async () => {
   try {
     const {

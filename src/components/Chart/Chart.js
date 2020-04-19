@@ -2,11 +2,18 @@ import React, { useState, useEffect } from "react";
 import styles from "./Chart.module.css";
 import { Line, Bar } from "react-chartjs-2";
 import { fetchDailyData } from "../../api";
-import { ResponsiveLine } from "@nivo/line";
-import { yellow } from "@material-ui/core/colors";
+import ChartsPage from "../Test/ChartsPage";
 
 const Chart = (props) => {
-  const { data1, countryName, dates, cases, deaths, recovered } = props;
+  const {
+    data1,
+    countryName,
+    dates,
+    cases,
+    deaths,
+    recovered,
+    recoveredData,
+  } = props;
 
   const [dailyData, setDailyData] = useState([]);
 
@@ -30,10 +37,17 @@ const Chart = (props) => {
             fill: true,
           },
           {
+            data: recoveredData,
+            label: "Recovered",
+            borderColor: "green",
+            backgroundColor: "rgba(3, 252, 136, 0.5)",
+            fill: true,
+          },
+          {
             data: dailyData.map(({ deaths }) => deaths),
             label: "Deaths",
             borderColor: "red",
-            backgroundColor: "rgba(255,0,0,0.5)",
+            backgroundColor: "rgba(255,0,0,1)",
             fill: true,
           },
         ],
@@ -97,14 +111,22 @@ const Chart = (props) => {
 
   let graph = globalLineChart;
   const bar = barGraph;
-
+  let newChart = null;
   if (countryName) {
     graph = countryLineChart;
+    newChart = (
+      <ChartsPage
+        label={dates}
+        cases={cases}
+        recovered={recovered}
+        deaths={deaths}
+      />
+    );
   }
   return (
     <div className={styles.container}>
       <div className={styles.graph}>{graph}</div>
-
+      <div>{newChart}</div>
       <div className={styles.bar}>{bar}</div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Cards, Chart, CountryPicker } from "../components";
 import styles from "../App.module.css";
-import { fetchData, fetchCountriesData } from "../api";
+import { fetchData, fetchCountriesData, fetchDailyRecoveredData } from "../api";
 
 import coronaImage from "../images/coronavirus.png";
 import { Paper, Typography } from "@material-ui/core";
@@ -15,11 +15,14 @@ class Layout extends React.Component {
     activeCase: [],
     deaths: [],
     recoveredCases: [],
+    recoveredData: [],
   };
 
   async componentDidMount() {
     const fetchedData = await fetchData();
     this.setState({ data: fetchedData });
+    const recoveredData = await fetchDailyRecoveredData();
+    this.setState({ recoveredData: recoveredData });
   }
 
   handleCountryChange = async (country) => {
@@ -60,6 +63,7 @@ class Layout extends React.Component {
           cases={this.state.activeCase}
           deaths={this.state.deaths}
           recovered={this.state.recoveredCases}
+          recoveredData={this.state.recoveredData}
         />
 
         <Paper elevation={3}>
