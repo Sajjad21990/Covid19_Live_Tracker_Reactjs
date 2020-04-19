@@ -126,7 +126,7 @@ const Chart = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.graph}>{graph}</div>
-      <div>{newChart}</div>
+      {/* <div>{newChart}</div> */}
       <div className={styles.bar}>{bar}</div>
     </div>
   );
